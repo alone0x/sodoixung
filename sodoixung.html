@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function nhap() {
+        x = prompt("nhập vào 1 chuỗi");
+        return x;
+    }
+
+    function nhapMang(x) {
+        let a = (x.length - 1) / 2;
+        let mang = [];
+        for (i = 0; i <= parseInt(a); i++) {
+            console.log(a);
+            mang.push(x[i]);
+
+        }
+         chuoi = mang.toString();
+        return chuoi;
+    }
+
+    function nhapMang2(x) {
+        let a = (x.length - 1) / 2;
+        let mang2 = [];
+        for (j = parseInt(x.length - 1); j >= a; j--) {
+            mang2.push(x[j]);
+        }
+        chuoi2 = mang2.toString();
+        return mang2;
+    }
+
+
+    function soSanh(a, b) {
+        console.log(a === b);
+        return (a === b);
+
+    }
+
+    function hienThi() {
+        x = nhap();
+        mang1 = nhapMang(x);
+        mang2 = nhapMang2(x);
+        console.log(mang1, mang2);
+        if (soSanh(chuoi, chuoi2)) {
+            alert("là số đối xứng")
+        } else {
+            alert("không phải là số đối xứng");
+        }
+    }
+
+    hienThi();
+</script>
+</body>
+</html>
